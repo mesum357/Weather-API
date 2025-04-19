@@ -34,9 +34,7 @@ response.on("data", function(data){
      const place = weatherData.location.name;
      console.log(place)
 
-     res.write(`<p>The Weather Condition In ${place} is ${cond}</p>`)
-     res.write(`<h1>The Temperature is ${temp} Celcius</h1>`)
-     res.write(`<img src=${icon}>`)
+     res.render("result",{temp:temp,cond:cond,icon:icon,place:place})
 })
 
 
